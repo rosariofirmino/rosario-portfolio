@@ -15,7 +15,7 @@ export default function About() {
         >
           <h2 className="text-3xl font-medium capitalize mb-8">About me</h2>
           <p>
-          My name is Rosario Firmino Palazzolo and I love to code, among other things. Since I was in elementary school, I remember spending hours in front of my mother's work computer utilizing Scratch to create small games and animations. When I finally got my own computer in middle school, my first Google search was "how to code?". Looking back, the 4 hour long Ruby on Rails tutorials I watched on Youtube may have been too advanced for my middle school self, but they lit a fire under me, and evoked my passion for Software engineering. 
+          My name is Rosario Firmino Palazzolo and I love to code, among other things. Since I was in elementary school, I remember spending hours in front of my mother&apos;s work computer utilizing Scratch to create small games and animations. When I finally got my own computer in middle school, my first Google search was &quot;how to code?&quot;. Looking back, the 4 hour long Ruby on Rails tutorials I watched on Youtube may have been too advanced for my middle school self, but they lit a fire under me, and evoked my passion for Software engineering. 
           </p>
         </motion.section>
       );
