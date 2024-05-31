@@ -4,6 +4,7 @@ import { LuGraduationCap, LuComputer, LuTrendingUp, LuGlobe } from "react-icons/
 import ceoImg from "@/public/ceoinc.png";
 import wagwanImg from "@/public/wagwan.png";
 import youniversityImg from "@/public/youniversity.png";
+import imageGeniusImg from "@/public/imagegenius.png"
 
 export const links = [
   {
@@ -72,6 +73,14 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Image Genius",
+    description:
+      "Full-stack SaaS AI image editor using Cloudinary's API, based on a credit system using Stripe.",
+    tags: ["Next", "Javascript", "React", "MongoDB", "Tailwind", "Clerk"],
+    imageUrl: imageGeniusImg,
+    href: 'https://imagegenius-lilac.vercel.app/'
+  },
   {
     title: "CEO Inc",
     description:
