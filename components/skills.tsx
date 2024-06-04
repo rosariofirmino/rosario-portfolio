@@ -23,7 +23,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className=" max-w-[53rem] scroll-mt-28 text-center "
     >
         <h2 className="text-3xl text-center font-medium capitalize mb-8">My Skills</h2>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">

@@ -5,6 +5,11 @@ import ceoImg from "@/public/ceoinc.png";
 import wagwanImg from "@/public/wagwan.png";
 import youniversityImg from "@/public/youniversity.png";
 import imageGeniusImg from "@/public/imagegenius.png"
+import cleanCodeImg from "@/public/readings/cleancode.jpg"
+import debuggingImg from "@/public/readings/debugging.jpg"
+import posdImg from "@/public/readings/posd.jpeg"
+import tractionImg from "@/public/readings/traction.jpg"
+
 
 export const links = [
   {
@@ -27,6 +32,10 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
+  {
+    name: "Readings",
+    hash: "#readings"
+  }
 ] as const;
 
 export const experiencesData = [
@@ -106,6 +115,38 @@ export const projectsData = [
     href: 'https://rosariofirmino-university-youniversity-4qdcpx.streamlit.app/'
   },
 ] as const;
+
+export const readingsData = [
+  {
+    title: "Debugging: The 9 Indispensable Rules for Finding Even the Most Elusive Software and Hardware Problems",
+    author:
+      "David J. Agans",
+    imageUrl: debuggingImg,
+    href: 'https://www.amazon.com/Debugging-Indispensable-Software-Hardware-Problems-ebook/dp/B00PDDKQV2'
+  },
+  {
+    title: "A Philosophy of Software Design",
+    author:
+      "John Ousterhout",
+    imageUrl: posdImg,
+    href: 'https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201'
+  },
+  {
+    title: "Clean Code: A Handbook of Agile Software Craftsmanship",
+    author:
+      "Robert C. Martin",
+    imageUrl: cleanCodeImg,
+    href: 'https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882'
+  },
+  {
+    title: "Traction: How Any Startup Can Achieve Explosive Customer Growth",
+    author:
+      "David J. Agans",
+    imageUrl: tractionImg,
+    href: 'https://www.amazon.com/Traction-Startup-Achieve-Explosive-Customer/dp/1591848369'
+  },
+] as const;
+
 
 export const skillsData = [
   "JavaScript",
