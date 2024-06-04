@@ -88,7 +88,7 @@ export const projectsData = [
       "Full-stack SaaS AI image editor using Cloudinary's API, based on a credit system using Stripe.",
     tags: ["Next", "Javascript", "React", "MongoDB", "Tailwind", "Clerk"],
     imageUrl: imageGeniusImg,
-    href: 'https://imagegenius-lilac.vercel.app/'
+    href: 'https://imagegeni.us/'
   },
   {
     title: "CEO Inc",
