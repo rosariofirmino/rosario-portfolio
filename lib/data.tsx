@@ -141,7 +141,7 @@ export const readingsData = [
   {
     title: "Traction: How Any Startup Can Achieve Explosive Customer Growth",
     author:
-      "David J. Agans",
+      "Gabriel Weinberg, Justin Mares",
     imageUrl: tractionImg,
     href: 'https://www.amazon.com/Traction-Startup-Achieve-Explosive-Customer/dp/1591848369'
   },
