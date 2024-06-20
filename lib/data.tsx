@@ -40,6 +40,14 @@ export const links = [
 
 export const experiencesData = [
     {
+      title: "Contract Web Developer @ CEO Inc",
+      location: "Boca Raton, FL",
+      description:
+        "Work asynchrounously as a Contract Web Developer for CEO Inc, where I created and maintain their new SPA along with maintaining their sister company's site Go Healthcare Staffing.",
+      icon: React.createElement(LuGlobe),
+      date: "2021",
+    },
+    {
     title: "Research Assistant @ UF",
     location: " Gainesville, FL",
     description:
@@ -64,20 +72,12 @@ export const experiencesData = [
     date: "2023",
   },
   {
-    title: "Contract Web Developer @ CEO Inc",
-    location: "Boca Raton, FL",
-    description:
-      "Work asynchrounously as a Contract Web Developer for CEO Inc, where I created and maintain their new SPA along with maintaining their sister company's site Go Healthcare Staffing.",
-    icon: React.createElement(LuGlobe),
-    date: "2021 - present",
-  },
-  {
     title: "Software Engineer @ Alteryx",
     location: "Irvine, CA",
     description:
-      "Currently work at Alteryx as a Software Engineer on the Growth team. I take on a large breadth of responsibilities from partner connect projects to UX experiments to DAP integration.",
+      "Worked at Alteryx as a Software Engineer on the Growth team. I take on a large breadth of responsibilities from partner connect projects to UX experiments to DAP integration.",
     icon: React.createElement(LuComputer),
-    date: "2023 - present",
+    date: "2023 - 2024",
   },
 ] as const;
 
