@@ -5,6 +5,7 @@ import ceoImg from "@/public/ceoinc.png";
 import wagwanImg from "@/public/wagwan.png";
 import youniversityImg from "@/public/youniversity.png";
 import imageGeniusImg from "@/public/imagegenius.png"
+import wegojimImg from "@/public/wegojim.png"
 import cleanCodeImg from "@/public/readings/cleancode.jpg"
 import debuggingImg from "@/public/readings/debugging.jpg"
 import posdImg from "@/public/readings/posd.jpeg"
@@ -89,6 +90,14 @@ export const projectsData = [
     tags: ["Next", "Javascript", "React", "MongoDB", "Tailwind", "Clerk"],
     imageUrl: imageGeniusImg,
     href: 'https://imagegeni.us/'
+  },
+  {
+    title: "wegojim",
+    description:
+      "React application styled with Tailwind that provides a comprehensive workout based on user requirements.",
+    tags: ["TypeScript", "React", "Next", "Vercel", "Tailwind"],
+    imageUrl: wegojimImg,
+    href: 'https://wegojim.vercel.app/'
   },
   {
     title: "CEO Inc",

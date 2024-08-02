@@ -15,7 +15,9 @@ export default function About() {
         >
           <h2 className="text-3xl font-medium capitalize mb-8">About me</h2>
           <p>
-          My name is Rosario Firmino Palazzolo and I love to code, among other things. Since I was in elementary school, I remember spending hours in front of my mother&apos;s work computer utilizing Scratch to create small games and animations. When I finally got my own computer in middle school, my first Google search was &quot;how to code?&quot;. Looking back, the 4 hour long Ruby on Rails tutorials I watched on Youtube may have been too advanced for my middle school self, but they lit a fire under me, and evoked my passion for Software engineering. 
+          I am a passionate and dedicated software engineer with a strong background in full-stack development. With a B.S. in Computer Science and a Minor in Mathematics from the University of Florida, I have improved upon my technical skills and gained practical experience through internships, personal projects, research, and full-time work.
+          
+          I pride myself on always taking initiative, being detail-oriented, and developing with the end user in mind. I love to learn, ask questions, and explore new ideas. 
           </p>
         </motion.section>
       );
