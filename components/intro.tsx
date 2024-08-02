@@ -5,7 +5,7 @@ import React from 'react'
 import rosarioHeadshot from '@/public/rosario.jpeg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import {BsArrowRight, BsLinkedin} from 'react-icons/bs'
+import {BsArrowRight, BsLinkedin, BsGithub} from 'react-icons/bs'
 import {HiDownload} from 'react-icons/hi'
 
 
@@ -33,6 +33,7 @@ export default function Intro() {
       <motion.div className = "flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium" initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{delay:0.1}}>
         <a href="/RosarioResume.pdf" download className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full hover:scale-110 active:scale-105 transition cursor-pointer">Resume <HiDownload/></a>
         <a href="https://www.linkedin.com/in/rosariofp/" target="_blank" className="bg-white p-4 flex items-center text-gray-700 gap-2 rounded-full hover:scale-110 active:scale-105 transition"> <BsLinkedin/> </a>
+        <a href="https://github.com/rosariofirmino" target="_blank" className="bg-white p-4 flex items-center text-gray-700 gap-2 rounded-full hover:scale-110 active:scale-105 transition"> <BsGithub/> </a>
       </motion.div>
     </section>
   )
