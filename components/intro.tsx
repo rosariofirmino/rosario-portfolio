@@ -106,10 +106,10 @@ export default function Intro() {
            style={{ color: "var(--text-tertiary)" }}>
           Tampa, FL
         </p>
-        <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter leading-[0.95]">
+        <h1 className="text-4xl sm:text-6xl font-bold tracking-tighter leading-[1]">
           <span className="grad-text">Rosario</span>
           <br />
-          <span style={{ color: "var(--text-primary)" }}>Palazzolo</span>
+          <span style={{ color: "var(--text-primary)" }}>Firmino Palazzolo</span>
         </h1>
 
         {/* Typing animation */}
