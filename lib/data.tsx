@@ -207,7 +207,7 @@ export const skillCategories = [
   {
     name: "Testing",
     icon: "check",
-    skills: ["Jest", "Mocha", "TestCafe", "Unit Testing", "Integration Testing", "E2E Testing"],
+    skills: ["Jest", "Mocha", "TestCafe", "Selenium", "Unit Testing", "Integration Testing", "E2E Testing"],
   },
 ] as const;
 

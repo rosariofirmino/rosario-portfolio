@@ -144,7 +144,7 @@ export default function Intro() {
         transition={{ ...smooth, delay: 0.5 }}
       >
         <a
-          href="/RosarioResume.pdf"
+          href="/RosarioResume.docx"
           download
           className="group glass flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-medium"
         >
