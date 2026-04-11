@@ -4,17 +4,14 @@ import React from "react";
 import { readingsData } from "@/lib/data";
 import Reading from "./reading";
 
-export default function Projects() {
+export default function RecommendedReadings() {
   return (
-    <section id="readings" className="scroll-mt-28 mb-28">
-      <h2 className="text-3xl text-center font-medium capitalize mb-8">
-        Recommended Readings
-      </h2>
-      <div className="flex flex-wrap justify-center gap-6">
+    <section id="readings" className="scroll-mt-28 mb-28 max-w-[54rem] mx-auto px-4 w-full">
+      <p className="heading">Learning</p>
+      <h2 className="heading-main">Books I recommend.</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {readingsData.map((reading, index) => (
-          <React.Fragment key={index}>
-            <Reading {...reading} />
-          </React.Fragment>
+          <Reading key={index} {...reading} index={index} />
         ))}
       </div>
     </section>

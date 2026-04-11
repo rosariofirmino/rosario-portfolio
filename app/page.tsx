@@ -1,11 +1,11 @@
-import Intro from '@/components/intro'
-import Divider from '@/components/divider'
-import About from '@/components/about'
-import Projects from '@/components/projects'
-import Skills from '@/components/skills'
-import Experience from '@/components/experience'
-import Footer from '@/components/footer'
-import RecommendedReadings from '@/components/recommendedreadings'
+import Intro from "@/components/intro";
+import Divider from "@/components/divider";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+import Experience from "@/components/experience";
+import Footer from "@/components/footer";
+import RecommendedReadings from "@/components/recommendedreadings";
 
 export default function Home() {
   return (
@@ -14,14 +14,14 @@ export default function Home() {
       <Divider />
       <About />
       <Divider />
+      <Experience />
+      <Divider />
       <Projects />
       <Divider />
       <Skills />
       <Divider />
-      <Experience />
-      <Divider />
       <RecommendedReadings />
       <Footer />
     </main>
-  )
+  );
 }

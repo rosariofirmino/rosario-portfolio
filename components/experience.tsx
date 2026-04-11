@@ -10,38 +10,94 @@ import { experiencesData } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="scroll-mt-28  ">
-        <h2 className="text-3xl text-center font-mediunm capitalize mb-8">My Experience</h2>
-      <VerticalTimeline >
+    <section id="experience" className="scroll-mt-28 w-full">
+      <p className="heading">Career</p>
+      <h2 className="heading-main">Where I&apos;ve worked.</h2>
+
+      <VerticalTimeline lineColor="var(--accent)">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
-            <VerticalTimelineElement visible={true}
+            <VerticalTimelineElement
+              visible={true}
               contentStyle={{
-                background: "#f3f4f6",
-                boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
-                textAlign: "left",
-                padding: "1.3rem 2rem",
+                background: "var(--surface)",
+                border: "1px solid var(--border)",
+                borderRadius: "1.25rem",
+                boxShadow: "var(--card-shadow)",
+                padding: "1.5rem 2rem",
+                color: "var(--text-primary)",
               }}
               contentArrowStyle={{
-                borderRight: "0.4rem solid #9ca3af",
+                borderRight: "0.4rem solid var(--border)",
               }}
               date={item.date}
-              icon={item.icon}
               iconStyle={{
-                background: "white",
-                fontSize: "1.5rem",
+                display: "none",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700">
+              <div className="flex items-start gap-3 mb-3">
+                <span className="text-xl mt-0.5" style={{ color: "var(--accent)" }}>
+                  {item.icon}
+                </span>
+                <div>
+                  <h3
+                    className="font-bold text-lg !mt-0 leading-tight"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className="text-sm font-medium !mt-0.5"
+                    style={{ color: "var(--accent)" }}
+                  >
+                    {item.company}
+                  </p>
+                </div>
+              </div>
+              <p
+                className="text-xs font-mono !mt-1"
+                style={{ color: "var(--text-tertiary)" }}
+              >
+                {item.location}
+              </p>
+              <p
+                className="text-sm !mt-3 !font-normal leading-relaxed"
+                style={{ color: "var(--text-secondary)" }}
+              >
                 {item.description}
               </p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
       </VerticalTimeline>
+
+      <style jsx global>{`
+        .vertical-timeline::before {
+          background: linear-gradient(
+            180deg,
+            transparent 0%,
+            var(--accent) 10%,
+            var(--accent-2) 90%,
+            transparent 100%
+          ) !important;
+          width: 2px !important;
+        }
+        .vertical-timeline-element-icon {
+          display: none !important;
+        }
+        .vertical-timeline-element-date {
+          color: var(--text-tertiary) !important;
+          font-size: 0.8rem !important;
+          letter-spacing: 0.03em;
+        }
+        .vertical-timeline-element-content {
+          transition: border-color 0.4s ease, box-shadow 0.4s ease !important;
+        }
+        .vertical-timeline-element-content:hover {
+          border-color: var(--border-hover) !important;
+          box-shadow: var(--card-hover-shadow) !important;
+        }
+      `}</style>
     </section>
   );
 }

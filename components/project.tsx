@@ -1,11 +1,10 @@
 "use client";
 
-import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number] & { index: number };
 
 export default function Project({
   title,
@@ -13,61 +12,71 @@ export default function Project({
   tags,
   imageUrl,
   href,
+  index,
 }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
-      }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group glass overflow-hidden rounded-2xl flex flex-col h-full w-full"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[17rem] hover:bg-gray-200 transition sm:group-even:pl-8">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <a href={href} className="text-2xl font-semibold">{title}</a>
-          <p className="mt-2 leading-relaxed text-gray-700">
-            {description}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <a href={href} target="_blank">
+      {/* Image */}
+      <div className="relative h-48 overflow-hidden">
         <Image
           src={imageUrl}
-          alt="Project"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
         />
-        </a>
-      </section>
-    </motion.div>
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, transparent 30%, var(--bg-base) 100%)",
+          }}
+        />
+
+        {/* External link badge */}
+        <div className="absolute top-4 right-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+          <div
+            className="backdrop-blur-md p-2 rounded-xl border"
+            style={{
+              background: "var(--accent-subtle)",
+              borderColor: "var(--border-hover)",
+            }}
+          >
+            <HiOutlineExternalLink className="text-[var(--accent)]" size={16} />
+          </div>
+        </div>
+
+        {/* Project number */}
+        <div className="absolute bottom-4 left-5 font-mono text-[0.6rem] tracking-widest uppercase"
+          style={{ color: "var(--text-tertiary)" }}>
+          0{index + 1}
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-6 flex flex-col flex-1">
+        <h3
+          className="text-xl font-bold mb-2 transition-colors duration-500"
+          style={{ color: "var(--text-primary)" }}
+        >
+          <span className="link-line group-hover:text-[var(--accent)]">{title}</span>
+        </h3>
+        <p className="text-sm leading-relaxed mb-5 flex-1" style={{ color: "var(--text-secondary)" }}>
+          {description}
+        </p>
+        <ul className="flex flex-wrap gap-2">
+          {tags.map((tag, i) => (
+            <li key={i} className="pill text-[0.65rem]">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </a>
   );
 }
